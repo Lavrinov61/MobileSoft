@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- M3 Expressive Palette -->
+    <color name="expressive_primary">#0061A4</color>
+    <color name="expressive_on_primary">#FFFFFF</color>
+    <color name="expressive_primary_container">#D1E4FF</color>
+    <color name="expressive_on_primary_container">#001D36</color>
+
+    <color name="expressive_secondary">#B95900</color>
+    <color name="expressive_on_secondary">#FFFFFF</color>
+    <color name="expressive_secondary_container">#FFDBC7</color>
+    <color name="expressive_on_secondary_container">#341100</color>
+
+    <color name="expressive_tertiary">#006A60</color>
+    <color name="expressive_on_tertiary">#FFFFFF</color>
+    <color name="expressive_tertiary_container">#74F8E5</color>
+    <color name="expressive_on_tertiary_container">#00201C</color>
+
+    <color name="expressive_error">#BA1A1A</color>
+    <color name="expressive_on_error">#FFFFFF</color>
+
+    <color name="expressive_background">#FDFCFF</color>
+    <color name="expressive_on_background">#1A1C1E</color>
+    <color name="expressive_surface">#FDFCFF</color>
+    <color name="expressive_on_surface">#1A1C1E</color>
+    <color name="expressive_surface_variant">#DFE2EB</color>
+    <color name="expressive_on_surface_variant">#42474E</color>
+    <color name="expressive_outline">#73777F</color>
+
+    <!-- Original Palette (for reference, can be deleted later) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

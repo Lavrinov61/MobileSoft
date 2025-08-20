@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Services can be read by anyone, but not written to by the client.
+    match /services/{serviceId} {
+      allow read: if true;
+      allow write: if false; // Should be managed by an admin panel
+    }
+
+    // Schedule slots can be read by any authenticated user.
+    // They can only be updated via the createBooking transaction.
+    match /schedule_slots/{slotId} {
+      allow read: if request.auth != null;
+      // Allow updates only if the 'isBooked' field is being changed from false to true.
+      // This is what our booking transaction does.
+      allow update: if request.auth != null &&
+                       request.resource.data.isBooked == true &&
+                       resource.data.isBooked == false;
+      allow create, delete: if false; // Managed by admin
+    }
+
+    // Bookings can be created by the user who owns them.
+    // Users can only read their own bookings.
+    match /bookings/{bookingId} {
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if false; // Managed by admin
+    }
+  }
+}

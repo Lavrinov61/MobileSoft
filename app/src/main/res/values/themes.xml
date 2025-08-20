@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PhotoStudio" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- M3 Expressive Theming -->
+        <item name="colorPrimary">@color/expressive_primary</item>
+        <item name="colorOnPrimary">@color/expressive_on_primary</item>
+        <item name="colorPrimaryContainer">@color/expressive_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/expressive_on_primary_container</item>
+
+        <item name="colorSecondary">@color/expressive_secondary</item>
+        <item name="colorOnSecondary">@color/expressive_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/expressive_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/expressive_on_secondary_container</item>
+
+        <item name="colorTertiary">@color/expressive_tertiary</item>
+        <item name="colorOnTertiary">@color/expressive_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/expressive_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/expressive_on_tertiary_container</item>
+
+        <item name="colorError">@color/expressive_error</item>
+        <item name="colorOnError">@color/expressive_on_error</item>
+
+        <item name="android:colorBackground">@color/expressive_background</item>
+        <item name="colorOnBackground">@color/expressive_on_background</item>
+
+        <item name="colorSurface">@color/expressive_surface</item>
+        <item name="colorOnSurface">@color/expressive_on_surface</item>
+        <item name="colorSurfaceVariant">@color/expressive_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/expressive_on_surface_variant</item>
+
+        <item name="colorOutline">@color/expressive_outline</item>
+
+        <!-- Apply custom shapes to components -->
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
+    </style>
+
+    <style name="Theme.PhotoStudio" parent="Base.Theme.PhotoStudio" />
+
+    <!-- Define the custom card style -->
+    <style name="Widget.App.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.DynamicCard</item>
+    </style>
+
+</resources>
