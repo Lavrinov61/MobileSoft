@@ -1,26 +1,37 @@
 {
   "project_info": {
-    "project_number": "123456789012",
-    "project_id": "photo-studio-placeholder",
-    "storage_bucket": "photo-studio-placeholder.appspot.com"
+    "project_number": "892074192255",
+    "firebase_url": "https://magnusphotoproject-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "magnusphotoproject",
+    "storage_bucket": "magnusphotoproject.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:123456789012:android:123456789abcdef",
+        "mobilesdk_app_id": "1:892074192255:android:606cdc3452b777235f3e4a",
         "android_client_info": {
           "package_name": "com.fmagnus.photostudio"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "892074192255-03nk2pdh5jp20lllule6fglug9sq9jga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyC..._placeholder"
+          "current_key": "AIzaSyBuBAKeeagE8-LvrgNakbmZ3isvQwHrYFU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892074192255-03nk2pdh5jp20lllule6fglug9sq9jga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
