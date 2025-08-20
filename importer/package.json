@@ -1,0 +1,12 @@
+{
+  "name": "firestore-importer",
+  "version": "1.0.0",
+  "description": "A script to import sample data into Firestore.",
+  "main": "import.js",
+  "scripts": {
+    "start": "node import.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.0.0"
+  }
+}

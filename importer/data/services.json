@@ -1,0 +1,20 @@
+[
+  {
+    "id": "studio_photo_session",
+    "name": "Studio Photoshoot",
+    "description": "A professional one-hour shoot in our fully equipped studio.",
+    "price": 150
+  },
+  {
+    "id": "outdoor_photo_session",
+    "name": "Outdoor Session",
+    "description": "A two-hour photoshoot at a location of your choice.",
+    "price": 250
+  },
+  {
+    "id": "wedding_package",
+    "name": "Wedding Package",
+    "description": "Full-day coverage of your special day.",
+    "price": 1200
+  }
+]

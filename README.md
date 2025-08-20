@@ -53,30 +53,39 @@ In the Firebase Console, navigate to the following sections and enable them:
 3.  Paste it into the rules editor in the Firebase console, completely replacing the default rules.
 4.  Click "Publish".
 
-### 5. Add Sample Data (Manual)
+### 5. Add Sample Data (Automated Seeding)
 
-To test the app, you need to add some data to your Firestore database manually.
+To test the app, you can automatically import sample data into Firestore using the provided script. This is much easier than adding it manually.
 
-1.  **Create Collections:**
-    *   Go to the "Data" tab in Firestore.
-    *   Create a collection named `services`.
-    *   Create a collection named `schedule_slots`.
+**Prerequisites:**
+- You need to have [Node.js](https://nodejs.org/) installed on your computer.
+- You need your **Service Account Key** file. This is a JSON file you can generate from the Firebase Console (`Project Settings` -> `Service accounts` -> `Generate new private key`). **This key is secret and should not be shared publicly.**
 
-2.  **Add a Sample Service:**
-    *   In the `services` collection, click "Add document".
-    *   Let Firestore generate the Document ID.
-    *   Add the following fields:
-        *   `name` (String): "Studio Photoshoot"
-        *   `description` (String): "A professional one-hour shoot in our studio."
-        *   `price` (Number): 150
+**Steps:**
 
-3.  **Add a Sample Schedule Slot:**
-    *   In the `schedule_slots` collection, click "Add document".
-    *   Let Firestore generate the Document ID.
-    *   Add the following fields:
-        *   `serviceId` (String): *Copy the Document ID of the service you just created.*
-        *   `isBooked` (Boolean): `false`
-        *   `startTime` (Timestamp): *Choose a future date and time.*
-        *   `endTime` (Timestamp): *Choose a time one hour after `startTime`.*
+1.  **Place Service Account Key:**
+    *   Rename your downloaded service account key file to `serviceAccountKey.json`.
+    *   Place this file inside the `importer/` directory in this project.
 
-Now you can build and run the application on an Android device or emulator. You will be able to see the service, book it, and see it in your "My Bookings" list.
+2.  **Install Dependencies:**
+    *   Open a terminal or command prompt.
+    *   Navigate to the `importer/` directory:
+        ```bash
+        cd importer
+        ```
+    *   Install the necessary Node.js packages:
+        ```bash
+        npm install
+        ```
+
+3.  **Run the Import Script:**
+    *   While still in the `importer/` directory, run the script:
+        ```bash
+        npm start
+        ```
+
+The script will connect to your Firestore database and automatically create the `services` and `schedule_slots` collections with sample data.
+
+### 6. Run the App
+
+Now you can build and run the application on an Android device or emulator. You will be able to see the services, book one, and see it in your "My Bookings" list.
