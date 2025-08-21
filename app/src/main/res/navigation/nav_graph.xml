@@ -42,7 +42,11 @@
         android:id="@+id/mainFragment"
         android:name="com.fmagnus.photostudio.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_phoneVerificationFragment"
+            app:destination="@id/phoneVerificationFragment" />
+    </fragment>
 
     <!-- These are navigated to from within the main_nav_graph -->
     <fragment
@@ -54,19 +58,29 @@
             android:name="serviceId"
             app:argType="string" />
         <action
-            android:id="@+id/action_scheduleFragment_to_bookingFragment"
-            app:destination="@id/bookingFragment" />
+            android:id="@+id/action_scheduleFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
     </fragment>
-    <dialog
-        android:id="@+id/bookingFragment"
-        android:name="com.fmagnus.photostudio.ui.booking.BookingFragment"
-        android:label="fragment_booking"
-        tools:layout="@layout/fragment_booking" >
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.fmagnus.photostudio.ui.booking.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
         <argument
             android:name="slotId"
             app:argType="string" />
         <argument
             android:name="serviceId"
             app:argType="string" />
-    </dialog>
+    </fragment>
+    <fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="com.fmagnus.photostudio.ui.auth.PhoneVerificationFragment"
+        android:label="fragment_phone_verification"
+        tools:layout="@layout/fragment_phone_verification" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
 </navigation>

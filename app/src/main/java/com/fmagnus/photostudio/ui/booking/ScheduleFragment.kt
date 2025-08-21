@@ -58,7 +58,7 @@ class ScheduleFragment : Fragment() {
     private fun setupRecyclerView() {
         timeSlotAdapter = TimeSlotAdapter { slot ->
             if (!slot.isBooked) {
-                val action = ScheduleFragmentDirections.actionScheduleFragmentToBookingFragment(slot.id, args.serviceId)
+                val action = ScheduleFragmentDirections.actionScheduleFragmentToPaymentFragment(slot.id, args.serviceId)
                 findNavController().navigate(action)
             } else {
                 Toast.makeText(context, "This slot is already booked", Toast.LENGTH_SHORT).show()

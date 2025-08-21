@@ -57,11 +57,14 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-messaging-ktx")
+    implementation("com.google.firebase:firebase-functions-ktx")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
 
     // Calendar View
     implementation("com.github.kizitonwose:calendar:2.5.1")
 
+    // Payment SDK
+    implementation("com.github.LiftCommerce.cloudpayments-sdk:cloud-payments:1.4")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

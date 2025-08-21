@@ -23,5 +23,9 @@
         android:name="com.fmagnus.photostudio.ui.main.MyBookingsFragment"
         android:label="fragment_my_bookings"
         tools:layout="@layout/fragment_my_bookings" />
-
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.fmagnus.photostudio.ui.main.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

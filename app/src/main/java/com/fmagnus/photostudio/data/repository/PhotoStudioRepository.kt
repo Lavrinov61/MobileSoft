@@ -93,4 +93,16 @@ class PhotoStudioRepository {
             emptyList()
         }
     }
+
+    suspend fun getServiceDetails(serviceId: String): com.fmagnus.photostudio.data.model.PhotoService? {
+        return try {
+            db.collection("services").document(serviceId)
+                .get()
+                .await()
+                .toObject(com.fmagnus.photostudio.data.model.PhotoService::class.java)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
 }
